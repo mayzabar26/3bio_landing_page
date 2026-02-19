@@ -6,10 +6,10 @@
 
 <title>Conheça a 3Bio</title>
 
-<link rel="stylesheet" href="style/home_large.css">
-<link rel="stylesheet" href="style/home_small.css">
+<link rel="stylesheet" href="/style/home_large.css">
+<link rel="stylesheet" href="/style/home_small.css">
 
-<link rel="icon" href="images/leaf.png"> 
+<link rel="icon" href="/images/leaf.png"> 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,19 +19,21 @@
 <body>
 
 <!--Sidebar-->
-<aside class="sidebar active">
+<aside class="sidebar" id="sidebar">
 
-  <div class="menu">
-    <span class="close_btn">X</span>
-
+  <!--Botão inicial-->
+  <button class="start_btn" id="openMenu">Comece aqui</button>
+  
+  <!--Menu oculto-->
+  <div class="menu" id="menu">
+    <span class="close_btn" id="closeMenu">X</span>
     <ul>
-      <li><a href="conheca.html" class="active_link">Conheça a 3Bio!</a></li>
-      <li><a href="#">Nosso diferencial</a></li>
-      <li><a href="#">Nossos serviços</a></li>
-      <li><a href="#">Entre em contato</a></li>
+      <li><a href="/partes_html/conheca_3bio.html" class="active_link">Conheça a 3Bio!</a></li>
+      <li><a href="/partes_html/diferencial.html">Nosso diferencial</a></li>
+      <li><a href="/partes_html/servicos.html">Nossos serviços</a></li>
+      <li><a href="/partes_html/contato.html">Entre em contato</a></li>
     </ul>
   </div>
-
 </aside>
 
 <!--Conteúdo principal-->
@@ -41,21 +43,21 @@
     <h1>Conheça a 3Bio</h1>
 
     <p>
-      Lorem ipsum dolor sit amet. Et aspernatur harum est reiciendis possimus et quisquam possimus 
-      et enim laudantium est esse officiis.
-    </p>
-
-    <p>
-      Ut vitae asperiores ut labore aperiam quo eveniet esse vel dignissimos doloribus sed alias 
-      officiis aut alias praesentium sit voluptates quas.
+      A<strong> 3Bio Engenharia e Consultoria Ambiental</strong> atua no desenvolvimento de soluções técnicas 
+      voltadas à sustentabilidade e à responsabilidade ambiental. Realizamos análises, 
+      planejamentos e execuções de projetos que minimizam impactos ambientais e garantem 
+      conformidade com a legislação vigente. Com uma equipe qualificada, oferece suporte para 
+      que negócios operem de forma segura e regularizada. Nosso compromisso é unir desenvolvimento 
+      e preservação, promovendo um futuro mais sustentável.
     </p>
   </section>
 
   <section class="hero">
-    <img src="/images/meio ambiente.jpg" alt="Natureza">
+    <img src="/images/meio ambiente_01.jpg" alt="Natureza">
   </section>
 
 </main>
 
+<script src="/scripts/script.js"></script>
 </body>
 </html>

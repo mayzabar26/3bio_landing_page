@@ -137,3 +137,24 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+
+/*------------------------PÁGINA: Conheça a 3Bio------------------------*/
+.content {
+  height: 45%;
+  padding: 60px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 1100px;
+  line-height: 1.5;
+}
