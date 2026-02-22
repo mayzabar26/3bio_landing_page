@@ -19,7 +19,7 @@ body {
   overflow: hidden;
 }
 
-/*------------------------BLOCO 1: SIDE BAR------------------------*/
+/*------------------------HOME PAGE - BLOCO 1: SIDE BAR------------------------*/
 
 /*Side Bar*/
 .sidebar {
@@ -34,7 +34,7 @@ body {
 }
 
 .sidebar.active { /*Quando ativa*/
-  width: 50%;
+  width: 35%;
   justify-content: flex-start;
   padding-left: 80px;
 }
@@ -94,7 +94,17 @@ body {
 
 .start_btn:hover {background-color: var(--color_05);}
 
-/*------------------------BLOCO 2: LOGO------------------------*/
+/*Redes sociais*/
+.social_icons {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  gap: 30px;
+}
+
+/*------------------------HOME PAGE - BLOCO 2: LOGO------------------------*/
 
 /*Área principal*/
 .main {
@@ -124,7 +134,7 @@ body {
   margin-top:-25px;
 }
 
-/*------------------------BLOCO 3: IMAGEM BOTTOM 1------------------------*/
+/*------------------------HOME PAGE - BLOCO 3: IMAGEM BOTTOM 1------------------------*/
 
 /*Imagem | bottom 01*/
 .hero {
@@ -138,9 +148,7 @@ body {
   object-fit: cover;
 }
 
-
-
-/*------------------------PÁGINA: Conheça a 3Bio------------------------*/
+/*------------------------TEXTO GERAL: TÍTULO E PARÁGRAFO------------------------*/
 .content {
   height: 45%;
   padding: 60px;
@@ -148,7 +156,7 @@ body {
 
 .content h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-top: -15px;
   font-weight: 700;
 }
 
@@ -157,4 +165,41 @@ body {
   margin-bottom: 20px;
   max-width: 1100px;
   line-height: 1.5;
+}
+
+/*------------------------PÁGINA: NOSSOS SERVIÇOS------------------------*/
+ul li {
+  margin-left: 40px;
+  margin-top: -3px;
+}
+
+
+/*------------------------PÁGINA: CONTATO------------------------*/
+.contato_content {
+  padding: 60px;
+}
+
+.contato_content h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.contato_content .contact_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.contact_item i {
+  font-size: 1.5rem;
+  color: var(--color_01);
+}
+
+.contact_item a {
+  color: var(--color_01);
+  text-decoration: none;
 }
