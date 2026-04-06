@@ -1,6 +1,15 @@
 /************* MEDIA QUERIES *************/
 
+
 @media (max-width: 768px) {
+    :root {
+    --color_01: black;
+    --color_02: white;
+    --color_03: #006530;
+    --color_04: #f19000;
+    --color_05: #acc90d;
+
+    --font_01: "Poppins";}
     
     /*index.html page*/
     body {
@@ -12,6 +21,7 @@
     .start_btn {
         width: 150px;
         height: 150px;
+        animation: pulse 2s infinite;
     }
 
     .sidebar {
@@ -34,7 +44,7 @@
     }
 
     .menu li {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .menu a {
@@ -52,10 +62,66 @@
     }
 
     .logo img {
-        height: 120px;
+        height: 90px;
     }
 
     .hero img {
         height: 100%;
         object-fit: cover;}
+
+
+
+    /*Página - Conheça a 3BIO*/
+    .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content .title_02 {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+        padding-top: 20px;
+        margin-bottom: 25px;
+        align-items: center;
+    }
+
+    @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } 
+    100% { transform: scale(1); } 
+    }
+
+    .content .text_02{
+        font-size: 1rem;
+    }
+
+
+    .hero .hero_img {
+        display: none;
+    }
+
+    /*Página - Entre em contato*/
+    .content .title_03 {
+        font-size: 2.3rem;
+        padding-top: 80px;
+        margin-bottom: 25px;
+    }
+    
+    .main .contact_item {
+        font-size: 1.2rem;
+    }
+
+    .main .contact_item a:hover {
+        color: var(--color_04);
+        transition: all 0.3s ease;
+        transform: scale(1.05);
+    }
+
+    footer{
+        font-size: 0.7rem;
+    }
+
+
 }

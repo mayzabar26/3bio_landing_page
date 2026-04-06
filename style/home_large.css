@@ -203,3 +203,13 @@ ul li {
   color: var(--color_01);
   text-decoration: none;
 }
+
+footer {
+    background-color: var(--color_03);
+    color: var(--color_02);
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 125%;
+}
