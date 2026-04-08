@@ -40,7 +40,13 @@
 
     .menu a {
         font-size: 0.9rem;
-        padding-top: 20px;
+        top: 30px;
+    }
+
+    .social_icons {
+        flex-direction: row;
+        top: -30px;
+        left: 50%;
     }
 
     /* Área principal em coluna */
@@ -75,6 +81,7 @@
     
     .logo .title_index {
         font-size: 1.2rem;
+        padding-bottom: 5px;
     }
 
     /* Texto responsivo */
