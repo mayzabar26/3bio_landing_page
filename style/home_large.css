@@ -15,7 +15,7 @@ body {
   font-family: var(--font_01);
   background-color: var(--color_02);
   display: flex;
-  height: 100vh;
+  flex-direction: row;
   overflow: hidden;
 }
 
@@ -62,7 +62,7 @@ body {
 .menu a {
   text-decoration: none;
   color: var(--color_02);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 600;
   transition: opacity 0.3s;
 }
@@ -80,8 +80,8 @@ body {
 
 /*Botão de começar*/
 .start_btn {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   border: 2px solid var(--color_02);
   background: transparent;
@@ -207,9 +207,9 @@ ul li {
 footer {
     background-color: var(--color_03);
     color: var(--color_02);
-    text-align: center;
+    text-align: right;
     padding: 15px;
     position: absolute;
     bottom: 0;
-    width: 125%;
+    width: 100%;
 }

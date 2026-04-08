@@ -5,6 +5,8 @@
   body {
     flex-direction: column;
     overflow: auto;
+    margin: 0;
+    padding: 0;
   }
 
   /* Sidebar no topo ocupando toda a largura */
@@ -18,55 +20,60 @@
     .sidebar {
         flex-direction: column;
         width: 100%;
-        height: 13rem;
+        height: 28vh; 
+        padding: 0.5rem 0;
         justify-content: center;
     }
 
     .sidebar.active {
         width: 100%;
         justify-content: center;
-        height: 13rem;
+        height: 28vh;
         padding-left: 0;
     }
 
     .menu {
         flex-direction: column;
         align-items: left;
+        margin-top: 0;
     }
 
-    .menu li {
-        margin-bottom: 5px;
-    }
+    .menu li {margin-bottom: 5px;}
 
     .menu a {
-        margin-top: 20px;
+        margin-top: 15px;
         font-size: 0.9rem;
     }
 
     .social_icons {
         flex-direction: row;
-        top: -45px;
+        bottom: 45px;
         left: 40%;
     }
 
-    .main {
-        padding: 10px;
-    }
+    .main {padding: 10px;}
 
     /*Remover imagens em telas menores*/
-    .hero_img {
-        display: none;
+    .hero {
+        margin: 0;   
+        padding: 0;  
     }
+
+    .hero_img {display: none;}
 
     .logo .index_logo_img{
-        width: 60%;
+        width: 50%;
         height: auto;
-        padding-top: 5px;
+        padding-top: 15px;
     }
 
-    .hero .hero_index_img {
-        width: 100%;
+    .hero_index_img {
+        max-width: 100%;
         height: auto;
+        object-fit: cover;
+        padding-top: 30px;
+        border-radius: 30px;
+        border-bottom: 5px solid var(--color_04);
     }
 
     /*Títulos com animação*/
@@ -74,12 +81,10 @@
     .contato_content h1 {
         font-size: 1.3rem;
         text-align: left;
-        animation: fadeIn 2s ease-in-out infinite alternate;
+        animation: fadeIn 1s ease-in-out 1;
     }
     
-    .logo .title_index {
-        font-size: 1rem;
-    }
+    .logo .title_index {font-size: 1rem;}
 
     /*Texto responsivo*/
     .content p,
@@ -90,8 +95,10 @@
     
     footer {
         width: 100%;
-        position: relative;
         font-size: 0.5rem;
+        flex-direction: column;
+        text-align: center;
+
     }
 }
 
