@@ -18,14 +18,14 @@
     .sidebar {
         flex-direction: column;
         width: 100%;
-        height: 250px;
+        height: 13rem;
         justify-content: center;
-        padding-left: 0;
     }
 
     .sidebar.active {
         width: 100%;
         justify-content: center;
+        height: 13rem;
         padding-left: 0;
     }
 
@@ -39,23 +39,21 @@
     }
 
     .menu a {
+        margin-top: 20px;
         font-size: 0.9rem;
-        top: 30px;
     }
 
     .social_icons {
         flex-direction: row;
-        top: -30px;
-        left: 50%;
+        top: -45px;
+        left: 40%;
     }
 
-    /* Área principal em coluna */
     .main {
-        width: 100%;
-        padding: auto;
+        padding: 10px;
     }
 
-    /* Remover imagens em telas menores */
+    /*Remover imagens em telas menores*/
     .hero_img {
         display: none;
     }
@@ -71,32 +69,29 @@
         height: auto;
     }
 
-    /* Títulos com animação */
+    /*Títulos com animação*/
     .content h1,
     .contato_content h1 {
-        font-size: 2rem;
-        text-align: center;
+        font-size: 1.3rem;
+        text-align: left;
         animation: fadeIn 2s ease-in-out infinite alternate;
     }
     
     .logo .title_index {
-        font-size: 1.2rem;
-        padding-bottom: 5px;
+        font-size: 1rem;
     }
 
-    /* Texto responsivo */
+    /*Texto responsivo*/
     .content p,
     .contato_content p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: left;
-        padding-top: 8px;
     }
-
-    /* Footer ajustado */
+    
     footer {
         width: 100%;
         position: relative;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
 }
 
