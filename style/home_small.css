@@ -1,105 +1,200 @@
-/*------------------------MEDIA QUERIES------------------------*/
+/*------------------------RESPONSIVIDADE------------------------*/
+:root {
+    --color_01: black;
+    --color_02: white;
+    --color_03: #006530;
+    --color_04: #f19000;
+    --color_05: #acc90d;
 
-/* Telas menores (celulares e tablets) */
-@media (max-width: 768px) {
+    --font_01: "Poppins";
+}
+
+
+/*Tablets (até 1024px)*/
+@media (max-width: 1024px) {
   body {
     flex-direction: column;
     overflow: auto;
-    margin: 0;
-    padding: 0;
   }
 
-  /* Sidebar no topo ocupando toda a largura */
-    .start_btn {
-        width: 110px;
-        height: 110px;
-        animation: pulse 2s infinite;
-        font-size: 0.8rem;
-    }
+  /*Sidebar vira topo fixo*/
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color_03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    z-index: 1000;
+  }
 
-    .sidebar {
-        flex-direction: column;
-        width: 100%;
-        height: 28vh; 
-        padding: 0.5rem 0;
-        justify-content: center;
-    }
+  /*Neutraliza comportamento de encolher do desktop*/
+  .sidebar.active {
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+  }
 
-    .sidebar.active {
-        width: 100%;
-        justify-content: center;
-        height: 28vh;
-        padding-left: 0;
-    }
+  /*Botão centralizado e maior*/
+  .start_btn {
+    width: 150px;
+    height: 150px;
+    font-size: 1.1rem;
+    margin: 15px auto;
+    display: block;
+  }
 
-    .menu {
-        flex-direction: column;
-        align-items: left;
-        margin-top: 0;
-    }
+  /*Esconde botão quando menu ativo*/
+  .sidebar.active .start_btn {
+    display: none;
+  }
 
-    .menu li {margin-bottom: 5px;}
+  /*Menu ocupa toda largura*/
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color_03);
+    padding: 20px;
+    position: static;
+  }
+  
+  /*Mostrar menu quando ativo*/
+  .sidebar.active .menu {
+    display: flex;
+  }
 
-    .menu a {
-        margin-top: 15px;
-        font-size: 0.9rem;
-    }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+  }
 
-    .social_icons {
-        flex-direction: row;
-        bottom: 45px;
-        left: 40%;
-    }
+  .menu li {
+    margin: 10px 0;
+  }
 
-    .main {padding: 10px;}
+  .menu a {
+    font-size: 1.2rem;
+    color: var(--color_02);
+  }
 
-    /*Remover imagens em telas menores*/
-    .hero {
-        margin: 0;   
-        padding: 0;  
-    }
+  /*Ícones centralizados*/
+  .social_icons {
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    position: static;
+  }
 
-    .hero_img {display: none;}
+  /*Texto copy centralizado*/
+  .copy {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 0.8rem;
+    color: var(--color_02);
+  }
 
-    .logo .index_logo_img{
-        width: 50%;
-        height: auto;
-        padding-top: 15px;
-    }
+  .main {
+    margin-top: 250px;
+  }
 
-    .hero_index_img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        padding-top: 30px;
-        border-radius: 30px;
-        border-bottom: 5px solid var(--color_04);
-    }
+  .title_index {
+    font-size: 1.3rem;
+  }
 
-    /*Títulos com animação*/
-    .content h1,
-    .contato_content h1 {
-        font-size: 1.3rem;
-        text-align: left;
-        animation: fadeIn 1s ease-in-out 1;
-    }
-    
-    .logo .title_index {font-size: 1rem;}
+  .index_logo_img {
+    height: 120px;
+  }
 
-    /*Texto responsivo*/
-    .content p,
-    .contato_content p {
-        font-size: 0.9rem;
-        text-align: left;
-    }
-    
-    footer {
-        width: 100%;
-        font-size: 0.5rem;
-        flex-direction: column;
-        text-align: center;
+  .hero_index_img {
+    max-height: 300px;
+    object-fit: cover;
+    border-bottom: 15px solid var(--color_04);
+    bottom: 0;
+  }
 
-    }
+  footer{background-color: var(--color_03); padding: 20px;}
+}
+
+/* Celulares muito pequenos (até 480px) */
+@media (max-width: 480px) {
+  .start_btn {
+    width: 100px;
+    height: 100px;
+    font-size: 0.9rem;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
+
+  .index_logo_img {
+    height: 70px;
+  }
+
+  .title_index {
+    font-size: 1rem;
+  }
+
+  .hero_index_img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .content h1 {
+    font-size: 1.6rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .social_icons {
+    gap: 15px;
+  }
+
+  .copy {
+    font-size: 0.7rem;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .start_btn {
+    width: 120px;
+    height: 120px;
+    font-size: 1rem;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+
+  .index_logo_img {
+    height: 90px;
+  }
+
+  .title_index {
+    font-size: 1.1rem;
+  }
+
+  .hero_index_img {
+    max-height: 250px;
+    object-fit: cover;
+  }
 }
 
 /* Telas muito grandes (monitores ultrawide) */
