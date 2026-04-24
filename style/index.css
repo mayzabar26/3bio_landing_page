@@ -21,7 +21,7 @@ body {
 
 /*------------------------HOME PAGE - BLOCO 1: SIDE BAR------------------------*/
 
-/*Side Bar*/
+/*SIDEBAR GLOBAL*/
 .sidebar {
   width: 25%;
   background-color: var(--color_03);
@@ -38,37 +38,43 @@ body {
   padding-left: 20px;
 }
 
-/*Menu*/
+/* MENU */
 .menu {
   display: none;
   flex-direction: column;
-  color: var(--color_02);
+  justify-content: center; /* CENTRALIZA VERTICAL */
+  align-items: flex-start; /* ALINHA À ESQUERDA */
+  height: 100%;
   width: 100%;
+  padding: 40px;
+  color: var(--color_02);
+  gap: 40px;
 }
 
-.sidebar.active .menu {display: flex;}
+.sidebar.active .menu { display: flex; }
+.sidebar.active .start_btn { display: none; }
 
-.sidebar.active .start_btn {display: none;}
-
-/*Menu - Lista*/
+/* LISTA */
 .menu ul {
   list-style: none;
-  margin-bottom: 50px;
 }
 
-.menu li {margin-bottom: 20px;}
+.menu li {
+  margin-bottom: 20px;
+}
 
 .menu a {
   text-decoration: none;
   color: var(--color_02);
   font-size: 1.4rem;
   font-weight: 600;
-  transition: opacity 0.3s;
 }
 
-.menu a:hover {color: var(--color_05);}
+.menu a:hover {
+  color: var(--color_05);
+}
 
-/*Botão fechar*/
+/* BOTÕES */
 .close_btn {
   position: absolute;
   top: 40px;
@@ -77,7 +83,6 @@ body {
   cursor: pointer;
 }
 
-/*Botão de começar*/
 .start_btn {
   width: 190px;
   height: 190px;
@@ -89,22 +94,18 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.start_btn:hover {background-color: var(--color_05);}
-
-/*Redes sociais*/
+/* SOCIAL */
 .social_icons {
   display: flex;
-  position: relative;
-  align-items: center;
-  bottom: 40px;
-  left: 70px;
-  gap: 30px;
+  gap: 20px;
 }
 
-.copy {font-size: 0.8rem; text-align: left; margin-left: 37px;}
+/* COPY */
+.copy {
+  font-size: 0.8rem;
+}
 
 /*------------------------HOME PAGE - BLOCO 2: LOGO------------------------*/
 
@@ -144,24 +145,6 @@ body {
   object-fit: cover;
 }
 
-/*------------------------TEXTO GERAL: TÍTULO E PARÁGRAFO------------------------*/
-.content {
-  height: 45%;
-  padding: 60px;
-}
-
-.content h1 {
-  font-size: 3rem;
-  margin-top: -15px;
-  font-weight: 700;
-}
-
-.content p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  max-width: 1100px;
-  line-height: 1.5;
-}
 
 /*------------------------PÁGINA: NOSSOS SERVIÇOS------------------------*/
 ul li {
