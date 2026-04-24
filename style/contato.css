@@ -1,0 +1,19 @@
+/*------------------------PÁGINA: CONTATO------------------------*/
+.contato_content .contact_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.contact_item i {
+  font-size: 1.5rem;
+  color: var(--color_01);
+}
+
+.contact_item a {
+  color: var(--color_01);
+  text-decoration: none;
+}
