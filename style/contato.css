@@ -1,19 +1,53 @@
 /*------------------------PÁGINA: CONTATO------------------------*/
-.contato_content .contact_item {
+.contato_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chama {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color_01);
+}
+
+.chama_p {
+  line-height: 1.5;
+  color: var(--color_01);
+}
+
+.contact_item {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
-  gap: 15px;
+  gap: 8px;
   font-size: 1.2rem;
-  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.contact_item:hover {
+  background-color: #f5f5f5;
+  transform: translateX(5px);
 }
 
 .contact_item i {
   font-size: 1.5rem;
-  color: var(--color_01);
+  color: var(--color_03);
+  min-width: 25px;
 }
 
 .contact_item a {
   color: var(--color_01);
   text-decoration: none;
+}
+
+.chama_acao {
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--color_03);
+}
+
+.content p {
+  max-width: 600px;
 }
